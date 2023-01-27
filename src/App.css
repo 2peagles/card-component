@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* primary */
+:root{
+--brightorange:hsl(31, 77%, 52%);
+--darkcyan:hsl(184, 100%, 22%);
+--verydarkcyan:hsl(179, 100%, 13%);
+--white:rgba(255, 255, 255, 0.75);
+--verylightgray:hsl(0, 0%, 95%);
+
+  font-family: 'Lexend Deca', sans-serif;
+}
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+.app{
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  min-height:100vh;
+}
+.card_container{
+  padding: 1rem;
+  display: grid;
+}
+.card_item{
+  min-height: 400px;
+  width: 300px;
+  padding:2rem;
+  display: grid;
+}
+
+.card_item p{
+  color:var(--white);
+  font-weight: 400;
+  font-family: 'Lexend Deca', sans-serif;
+}
+.card_item span{
+  color:var(--verylightgray);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: 'Big Shoulders Display', cursive;
+}
+ button {
+  width:fit-content;
+  padding:0 3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: capitalize;
+  border:none;
+  border-radius: 2rem;
+  background-color: var(--verylightgray);
+}
+ button:hover, button:focus{
+  outline: 3px solid white;
+  transition: .6s;
+  color:white;
+  background-color: transparent;
+}
+.card_container div:nth-child(1) button:hover, 
+.card_container div:nth-child(2) button:hover,
+.card_container div:nth-child(3) button:hover{
+  color:white;
+}
+.card_container div:nth-child(1) button {
+  color: var(--brightorange);
+}
+.card_container div:nth-child(2) button {
+  color: var(--darkcyan);
+}
+.card_container div:nth-child(3) button {
+  color: var(--verydarkcyan);
+}
+.card_container div:nth-child(1){
+  background-color: var(--brightorange);
+  border-radius: .5rem .5rem 0 0 ;
+}
+.card_container div:nth-child(2) {
+  background-color: var(--darkcyan);
+}
+.card_container div:nth-child(3) {
+  background-color: var(--verydarkcyan);
+  border-radius: 0 0  .5rem .5rem;
+}
+@media (width > 900px) {
+  .card_container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+    .card_container div:nth-child(1) {
+      border-radius: .5rem 0 0 .5rem;
+    }
+    .card_container div:nth-child(3) {
+      border-radius: 0 .5rem .5rem 0;
+    }
+}
