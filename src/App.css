@@ -25,7 +25,7 @@
   display: grid;
 }
 .card_item{
-  min-height: 400px;
+  min-height: 500px;
   width: 300px;
   padding:2rem;
   display: grid;
